@@ -19,12 +19,12 @@ _main:
     leaq _in_msg(%rip), %rdi
     callq _printf
 
-    movb $1, %al
+    movb $0, %al
     leaq _in_format(%rip), %rdi
     leaq -4(%rbp), %rsi
     callq _scanf
 
-    movb $1, %al
+    movb $0, %al
     leaq _out_msg(%rip), %rdi
     movq -4(%rbp), %rsi
     callq _printf

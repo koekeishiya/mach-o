@@ -8,7 +8,7 @@ _hello:
 _main:
     pushq %rbp
     movq %rsp, %rbp
-    movb $1, %al
+    movb $0, %al
     movl $42, %esi
     movq _hello@GOTPCREL(%rip), %rdi
     callq _printf
