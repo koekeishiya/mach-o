@@ -16,8 +16,9 @@ _phello:
     retq
 
 _main:
-    subq $8, %rsp
+    pushq %rbp
+    movq %rsp, %rbp
     callq _phello
-    movq $0x2000001, %rax
-    xorq %rdi, %rdi
-    syscall
+    xorq %rax, %rax
+    popq %rbp
+    retq
